@@ -1,5 +1,44 @@
+--api--
 http://127.0.0.1:5000/process_words [POST]
 {
   "words": ["giraffe", "mouse", "headphones", "penguin", "chtah", "headphones", "keybard", "octopus", "trie", "orge"],
   "session_id":"isuru"
+}
+
+--output--
+{
+  "Correct": {
+    "count": 6,
+    "total_score_change": 360,
+    "words": [
+      "giraffe",
+      "mouse",
+      "headphones",
+      "penguin",
+      "headphones",
+      "octopus"
+    ]
+  },
+  "Omission": {
+    "count": 1,
+    "total_score_change": -10,
+    "words": [
+      "chtah"
+    ]
+  },
+  "Phoneme Mismatch": {
+    "count": 1,
+    "total_score_change": -10,
+    "words": [
+      "keybard"
+    ]
+  },
+  "Reversal": {
+    "count": 2,
+    "total_score_change": -20,
+    "words": [
+      "trie",
+      "orge"
+    ]
+  }
 }
