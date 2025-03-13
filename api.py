@@ -117,7 +117,6 @@ class SpellingTutor:
             sessions[session_id]['results'].append(result)
             sessions[session_id]['previous_score'] = game.score
 
-        # Compute grouped results
         grouped_results = defaultdict(lambda: {'count': 0, 'total_score_change': 0, 'words': []})
         for result in results:
             error_type = result['error_type']
