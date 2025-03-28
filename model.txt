@@ -1,0 +1,8 @@
+Model Architecture
+Uses Bidirectional LSTMs (Long Short-Term Memory networks) for text encoding.
+GlobalMaxPooling1D reduces dimensionality.
+Combines sequence and phonetic features.
+Uses Softmax layer for multi-class classification.
+
+Training Process
+Uses EarlyStopping to prevent overfitting.

@@ -9,19 +9,9 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 1,
+      "execution_count": null,
       "metadata": {},
-      "outputs": [
-        {
-          "name": "stdout",
-          "output_type": "stream",
-          "text": [
-            "WARNING:tensorflow:From d:\\machine learning\\spelling error detection and classification system\\venv\\Lib\\site-packages\\keras\\src\\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.\n",
-            "\n",
-            "TF Version: 2.15.0\n"
-          ]
-        }
-      ],
+      "outputs": [],
       "source": [
         "import pandas as pd\n",
         "import numpy as np\n",
