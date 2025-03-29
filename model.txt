@@ -1,8 +1,20 @@
-Model Architecture
-Uses Bidirectional LSTMs (Long Short-Term Memory networks) for text encoding.
-GlobalMaxPooling1D reduces dimensionality.
-Combines sequence and phonetic features.
-Uses Softmax layer for multi-class classification.
+Architecture Overview
+
+1. Input Processing
+Character Sequence Input (seq_inputs) → Embedding → Bidirectional LSTMs
+Phonetic Feature Input (ph_inputs) → Concatenated with pooled LSTM output
+
+2.Model Components
+Embedding Layer: Converts character indices into 128-dimensional vectors, ignores padding.
+Bidirectional LSTMs: Extracts long-range patterns (512 & 256 units, dropout=0.2).
+GlobalMaxPooling1D: Extracts key sequence features.
+Concatenation: Merges pooled LSTM features with phonetic inputs.
+Fully Connected Layers: Dense(128, relu) for feature processing, Dropout(0.2) for regularization.
+
+3. Outputs
+error_output (Classification): Sigmoid activation, predicts spelling errors, binary_crossentropy loss.
+diff_output (Regression): Linear activation, predicts difficulty score, MSE loss.\
 
 Training Process
-Uses EarlyStopping to prevent overfitting.
+Batch Size: 32, Epochs: 100
+EarlyStopping: Stops if no improvement after 15 epochs.
