@@ -1,4 +1,7 @@
 Flask==2.3.2
+Flask-CORS==4.0.0
 numpy==1.24.3
+pandas==2.0.3
 jellyfish==0.9.0
 tensorflow==2.15.0
+scikit-learn==1.3.0
